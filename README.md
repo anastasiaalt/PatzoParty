@@ -1,0 +1,2 @@
+# PatzoParty
+Theme party wiki
