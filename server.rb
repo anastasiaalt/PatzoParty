@@ -74,5 +74,25 @@ module App
     erb :login_editor
   end
 
+  get '/articles' do
+    @articles = Article.all
+    erb :articles
+  end
+
+  get "/articles/:id" do
+    "Hello World"
+  end
+
+  get '/new_article' do
+    erb :new_article
+  end
+
+  post '/new_article' do
+    @article = Article.create(title: params["title"], img_url: params["img_url"], content: params["content"], created_at: DateTime.now, author_id: session[:author_id])
+    redirect to "/articles"
+  end
+
+
+
   end 
 end 

@@ -21,8 +21,8 @@ category = Category.create({label: "Art Party", article_id: article.id})
 
 
 editors = [
-  {name1: "Nash", name2: "Petrovic", location: "Fort_Greene", img_url: "https://media.licdn.com/mpr/mpr/shrink_100_100/p/6/005/009/1f4/3592c4c.jpg"}
-  {name1: "Gabriel", name2: "Levy", location: "Soho", img_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Aslaug_Magnusdottir_July_2012.jpg/220px-Aslaug_Magnusdottir_July_2012.jpg"}
+  {name1: "Nash", name2: "Petrovic", location: "Fort_Greene", img_url: "https://media.licdn.com/mpr/mpr/shrink_100_100/p/6/005/009/1f4/3592c4c.jpg"},
+  {name1: "Gabriel", name2: "Levy", location: "Soho", img_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Aslaug_Magnusdottir_July_2012.jpg/220px-Aslaug_Magnusdottir_July_2012.jpg"},
   {name1: "Chiyoko", name2: "Osborne", location: "Union_Square", img_url: "http://www.ivankatrump.com/wp-content/uploads/2015/03/Chiyoko-Osborne.jpg"}
 ]
 Editor.create(editors)
