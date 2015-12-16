@@ -24,17 +24,24 @@ module App
     end
   end  
 
-  get '/login' do
-    erb :login
-  end
+  delete "/sessions" do
+    session[:author_id] = nil
+    session[:editor_id] = nil
+    redirect to "/" 
+  end  
 
   get '/new_author' do
     erb :new_author
   end
 
   post '/new_author' do
-    "Add new author to authors table"
+    @author = Author.create(name1: params["name1"], name2: params["name2"], location: params["location"], img_url: params["img_url"], password: params["password"], password_confirmation: params["password_confirmation"])
     redirect to "/"
+  end
+
+  get '/authors' do
+    @authors = Author.all
+    erb :authors
   end
 
   get '/new_editor' do
@@ -42,8 +49,17 @@ module App
   end
 
   post '/new_editor' do
-    "Add new editor to editors table"
+    @editor = Editor.create(name1: params["name1"], name2: params["name2"], location: params["location"], img_url: params["img_url"], password: params["password"], password_confirmation: params["password_confirmation"])
     redirect to "/"
+  end
+
+  get '/editors' do
+    @editors = Editor.all
+    erb :editors
+  end
+
+  get '/login' do
+    erb :login
   end
 
   end 
