@@ -1,7 +1,6 @@
 <% if @author %>
   <h1>Welcome, <%= @author.name1 %>, you party planner extraordinarie!</h1>
-<% else %>
-<% if @editor %>
+<% elsif @editor %>
   <h1>Welcome, <%= @editor.name1 %>, you animal you!</h1>
 <% else %>
   <h1>Ready to party? Please login or create an account.</h1>
@@ -19,8 +18,7 @@
     <input type="hidden" name="_method" value="delete">
     <button>Log Out.</button>
   </form>
-<% else %>
-<% if @editor %>
+<% elsif @editor %>
   <p><a href="/articles">See all articles</a></p>
   <form action="/sessions" method="POST">
     <input type="hidden" name="_method" value="delete">
