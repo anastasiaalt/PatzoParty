@@ -11,16 +11,22 @@ module App
   end
 
   post "/sessions" do
-    author = Author.find_by({name: params[:name]}).try(:authenticate, params[:password])
-    editor = Editor.find_by({name: params[:name]}).try(:authenticate, params[:password])
+    author = Author.find_by({name1: params[:name1]}).try(:authenticate, params[:password])
     if author
       session[:author_id] = author.id
       redirect to "/"
-    elsif
+    else
+      redirect to "/login_author"
+    end
+  end  
+
+  post "/sessions" do
+    editor = Editor.find_by({name1: params[:name1]}).try(:authenticate, params[:password])
+    if editor
       session[:editor_id] = editor.id
       redirect to "/"
     else
-      redirect to "/login"
+      redirect to "/login_editor"
     end
   end  
 
@@ -40,6 +46,7 @@ module App
   end
 
   get '/authors' do
+    redirect to "/" if !session[:author_id]
     @authors = Author.all
     erb :authors
   end
@@ -54,12 +61,17 @@ module App
   end
 
   get '/editors' do
+    redirect to "/" if !session[:editor_id]
     @editors = Editor.all
     erb :editors
   end
 
-  get '/login' do
-    erb :login
+  get '/login_author' do
+    erb :login_author
+  end
+
+  get '/login_editor' do
+    erb :login_editor
   end
 
   end 

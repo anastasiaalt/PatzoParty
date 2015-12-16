@@ -1,7 +1,7 @@
 <ul>
   <% @authors.each do |author| %>
     <li>
-      <p><a href="/authors/<%= author.id %>"><%= author.name1 %></a></p>
+      <p><%= author.name1 %> "Party God" <%= author.name2 %></p>
       <img src="<%= author.img_url %>" alt="<%= author.name1 %>">
     </li>
   <% end %>
