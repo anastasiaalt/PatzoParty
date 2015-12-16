@@ -5,6 +5,7 @@ module App
     enable :sessions
 
   get "/" do
+    @author = Author.find(session[:author_id]) if session[:author_id]
     erb(:index)
   end
 

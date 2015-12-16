@@ -1,7 +1,33 @@
-<% if @user %>
-<h1>Welcome, <%= @user.name1 %>, you party animal!</h1>
+<% if @author %>
+  <h1>Welcome, <%= @author.name1 %>, you party planner extraordinarie!</h1>
 <% else %>
+<% if @editor %>
+  <h1>Welcome, <%= @editor.name1 %>, you animal you!</h1>
+<% else %>
+  <h1>Ready to party? Please login or create an account.</h1>
+<% end %>
 
-<h1>Ready to party? Please login or create an account.</h1>
+<div>
+  <img id="logo" src="/img/patzologo.png" alt="Patzo Party">
+</div>
 
-<img src="/img/patzologo.png" alt="Patzo Party">
+<% if @author %>
+  <p><a href="/new_article">Create a new article</a></p>
+  <p><a href="/articles">See all articles</a></p>
+  
+  <form action="/sessions" method="POST">
+    <input type="hidden" name="_method" value="delete">
+    <button>Log Out.</button>
+  </form>
+<% else %>
+<% if @editor %>
+  <p><a href="/articles">See all articles</a></p>
+  <form action="/sessions" method="POST">
+    <input type="hidden" name="_method" value="delete">
+    <button>Log Out.</button>
+  </form>
+<% else %>
+  <p><a href="/login">Log In</a></p>
+  <p><a href="/new_author">Authors Sign Up!</a></p>
+  <p><a href="/new_editor">Editors Sign Up!</a></p>
+<% end %>
