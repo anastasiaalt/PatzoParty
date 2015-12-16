@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS categories;
 
 CREATE TABLE authors (
   id INTEGER PRIMARY KEY,
+  password_digest VARCHAR,
   name1 VARCHAR,
   name2 VARCHAR,
   location VARCHAR,
@@ -13,6 +14,7 @@ CREATE TABLE authors (
 
 CREATE TABLE editors (
   id INTEGER PRIMARY KEY,
+  password_digest VARCHAR,
   name1 VARCHAR,
   name2 VARCHAR,
   location VARCHAR,
