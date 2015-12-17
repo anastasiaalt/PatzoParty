@@ -3,6 +3,10 @@
     <li>
       <p><%= author.name1 %> "Party God" <%= author.name2 %></p>
       <img src="<%= author.img_url %>" alt="<%= author.name1 %>">
+      <form method="POST" action="authors/<%= author.id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="delete">
+      </form>
     </li>
   <% end %>
 </ul>
