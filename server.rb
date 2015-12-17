@@ -55,6 +55,11 @@ module App
     erb :authors
   end
 
+  post '/authors/:id' do
+    Author.delete(params[:id])
+    redirect to "/authors"
+  end
+
   get '/new_editor' do
     erb :new_editor
   end
@@ -68,6 +73,11 @@ module App
     redirect to "/" if !session[:editor_id]
     @editors = Editor.all
     erb :editors
+  end
+
+  post '/editors/:id' do
+    Editor.delete(params[:id])
+    redirect to "/editors"
   end
 
   get '/login_author' do
