@@ -2,7 +2,7 @@
   <% @editors.each do |editor| %>
     <li>
       <p><%= editor.name1 %> "Party Worshipper" <%= editor.name2 %></p>
-      <img src="<%= editor.img_url %>" alt="<%= editor.name1 %>">
+      <img src="<%= editor.img_url %>" alt="No Image">
       <form method="POST" action="editors/<%= editor.id %>">
         <input type="hidden" name="_method" value="DELETE">
         <input type="submit" value="delete">
