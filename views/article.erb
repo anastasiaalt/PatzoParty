@@ -1,8 +1,9 @@
 <div>
   <h1><%= @article.title %></h1>
   <img src="<%= @article.img_url %>" alt="No Image">
-  <p><%= @article.created_at %></p>
-  <p><%= @article.author_id.name1 %></p>
+  <p>Dreamed up at <%= @article.created_at %></p>
+  <p>By <%= @article.author.name1 %> <%= @article.author.name2 %></p>
   <p><%= @article.content %></p>
 </div>
+<p><a href="/articles/:id">Edit</a></p>
 <p><a href="/articles">Back to List of Articles</a></p>

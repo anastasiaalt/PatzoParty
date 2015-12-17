@@ -1,7 +1,7 @@
 module App
 
   class Server < Sinatra::Base
-    set :method_overide, true
+    set :method_override, true
     enable :sessions
 
   get "/" do
@@ -46,7 +46,7 @@ module App
 
   post '/new_author' do
     @author = Author.create(name1: params["name1"], name2: params["name2"], location: params["location"], img_url: params["img_url"], password: params["password"], password_confirmation: params["password_confirmation"])
-    redirect to "/"
+    redirect to "/login_author"
   end
 
   get '/authors' do
@@ -66,7 +66,7 @@ module App
 
   post '/new_editor' do
     @editor = Editor.create(name1: params["name1"], name2: params["name2"], location: params["location"], img_url: params["img_url"], password: params["password"], password_confirmation: params["password_confirmation"])
-    redirect to "/"
+    redirect to "/login_editor"
   end
 
   get '/editors' do
@@ -93,7 +93,8 @@ module App
     erb :articles
   end
 
-  get "/articles/:id" do
+  get '/articles/:id' do
+    @article = Article.find(params[:id])
     erb :article
   end
 
@@ -103,6 +104,11 @@ module App
 
   post '/new_article' do
     @article = Article.create(title: params["title"], img_url: params["img_url"], content: params["content"], created_at: DateTime.now, author_id: session[:author_id])
+    redirect to "/articles"
+  end
+
+  post '/articles/:id' do
+    Article.delete(params[:id])
     redirect to "/articles"
   end
 

@@ -5,6 +5,11 @@
       <p><a href="articles/<%= article.id %>"><%= article.title %> by <%= article.author.name1 %> <%= article.author.name2 %></a></p>
       <p><%= article.created_at %></p>
       <p><img src="<%= article.img_url %>" alt="/public/img/partygoer.jpg"></p>
+        <form method="POST" action="articles/<%= article.id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="delete">
+      </form>
     </li>
   <% end %>
 </ul>
+
