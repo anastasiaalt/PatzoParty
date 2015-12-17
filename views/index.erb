@@ -13,12 +13,12 @@
 <% if @author %>
   <p><a href="/new_article">Create a new article</a></p>
   
-  <form action="/sessions" method="POST">
+  <form action="/author_sessions" method="POST">
     <input type="hidden" name="_method" value="delete">
     <button>Log Out.</button>
   </form>
 <% elsif @editor %>
-  <form action="/sessions" method="POST">
+  <form action="/editor_sessions" method="POST">
     <input type="hidden" name="_method" value="delete">
     <button>Log Out.</button>
   </form>

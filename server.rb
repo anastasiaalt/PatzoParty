@@ -10,7 +10,7 @@ module App
     erb :index
   end
 
-  post "/sessions" do
+  post "/author_sessions" do
     author = Author.find_by({name1: params[:name1]}).try(:authenticate, params[:password])
     if author
       session[:author_id] = author.id
@@ -20,7 +20,7 @@ module App
     end
   end  
 
-  post "/sessions" do
+  post "/editor_sessions" do
     editor = Editor.find_by({name1: params[:name1]}).try(:authenticate, params[:password])
     if editor
       session[:editor_id] = editor.id
@@ -30,8 +30,12 @@ module App
     end
   end  
 
-  delete "/sessions" do
+  delete "/author_sessions" do
     session[:author_id] = nil
+    redirect to "/" 
+  end  
+
+  delete "/editor_sessions" do
     session[:editor_id] = nil
     redirect to "/" 
   end  
