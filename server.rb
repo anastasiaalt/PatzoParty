@@ -84,7 +84,7 @@ module App
   end
 
   get "/articles/:id" do
-    "Hello World"
+    erb :article
   end
 
   get '/new_article' do
@@ -95,8 +95,6 @@ module App
     @article = Article.create(title: params["title"], img_url: params["img_url"], content: params["content"], created_at: DateTime.now, author_id: session[:author_id])
     redirect to "/articles"
   end
-
-
 
   end 
 end 
