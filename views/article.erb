@@ -2,6 +2,7 @@
   <h1><%= @article.title %></h1>
   <img src="<%= @article.img_url %>" alt="No Image">
   <p>Dreamed up at <%= @article.created_at %></p>
+  <p>Last updated up at <%= @article.updated_at %></p>
   <p>By <%= @article.author.name1 %> <%= @article.author.name2 %></p>
   <p><%= @article.content %></p>
 </div>
