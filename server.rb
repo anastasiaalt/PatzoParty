@@ -94,6 +94,8 @@ module App
   end
 
   get '/articles/:id' do
+    @author = Author.find(session[:author_id]) if session[:author_id]
+    @editor = Editor.find(session[:editor_id]) if session[:editor_id]
     @article = Article.find(params[:id])
     erb :article
   end
