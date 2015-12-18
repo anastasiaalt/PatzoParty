@@ -4,12 +4,17 @@
   <p>Dreamed up at <%= @article.created_at %></p>
   <p>
     Last updated up at <%= @article.updated_at %> by
-    <% if @author%> <%= @author.name1 %> <%= @author.name2 %>
-    <% else @editor %> <%= @editor.name1 %> <%= @editor.name2 %>
+    <% if @author %>
+      <%= @author.name1 %> <%= @author.name2 %>
+    <% elsif @editor %>
+      <%= @editor.name1 %> <%= @editor.name2 %>
+    <% else %>
+      Party Animals
     <% end %>
   </p>
   <p>By <%= @article.author.name1 %> <%= @article.author.name2 %></p>
   <p><%= @article.content %></p>
 </div>
 <p><a href="/articles/:id">Edit</a></p>
+<!-- I don't want this to be a submit, I want this to be where you find the form to edit everything -->
 <p><a href="/articles">Back to List of Articles</a></p>
