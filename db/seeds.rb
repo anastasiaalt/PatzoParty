@@ -8,9 +8,9 @@ author = Author.create({name1: "Zev", name2: "Rector", location: "Greenpoint", i
 # create an individual Author and assign it to a variable "author"
 # create an individual Article and set it's author_id to whatever the id is of the author model above.
 
-article = Article.create({title: "Fur, Feather, Lace, Leather", img_url: "http://www.whatgoesaroundnyc.com/blog/wp-content/uploads/2013/06/guy-bourdin-02.jpg", content: "The best party ever", author_id: author.id, created_at: DateTime.new(2015,12,31,1,11)})
-article = Article.create({title: "All That Glitters", img_url: "https://s-media-cache-ak0.pinimg.com/736x/4b/4a/f4/4b4af45ef8b5a1f0f534c972834e6391.jpg", content: "A glittery good time", author_id: author.id, created_at: DateTime.new(2015,12,31,2,22)})
-article = Article.create({title: "House of Mirrors", img_url: "https://blog.weetas.com/wp-content/uploads/2014/12/a_room_full_of_mirrors_and_reflections__3d_backgrounds_for_pcs__desktops_and_computers-1280x800-1038x576.jpg", content: "Reflections everywhere", author_id: author.id, created_at: DateTime.new(2015,12,31,3,33)})
+article = Article.create({title: "Fur, Feather, Lace, Leather", img_url: "http://www.whatgoesaroundnyc.com/blog/wp-content/uploads/2013/06/guy-bourdin-02.jpg", content: "The best party ever", author_id: author.id, created_at: DateTime.new(2015,12,31,1,11), updated_at: DateTime.new(2015,12,31,5,10)})
+article = Article.create({title: "All That Glitters", img_url: "https://s-media-cache-ak0.pinimg.com/736x/4b/4a/f4/4b4af45ef8b5a1f0f534c972834e6391.jpg", content: "A glittery good time", author_id: author.id, created_at: DateTime.new(2015,12,31,2,11), updated_at: DateTime.new(2015,12,31,6,10)})
+article = Article.create({title: "House of Mirrors", img_url: "https://blog.weetas.com/wp-content/uploads/2014/12/a_room_full_of_mirrors_and_reflections__3d_backgrounds_for_pcs__desktops_and_computers-1280x800-1038x576.jpg", content: "Reflections everywhere", author_id: author.id, created_at: DateTime.new(2015,12,31,3,11), updated_at: DateTime.new(2015,12,31,7,10)})
 
 
 

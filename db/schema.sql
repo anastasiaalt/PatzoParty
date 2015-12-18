@@ -27,6 +27,7 @@ CREATE TABLE articles (
   img_url VARCHAR (225),
   content VARCHAR,
   created_at DATETIME,
+  updated_at DATETIME,
   author_id INTEGER
 );
 
