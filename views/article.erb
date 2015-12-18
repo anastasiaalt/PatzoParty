@@ -15,6 +15,6 @@
   <p>By <%= @article.author.name1 %> <%= @article.author.name2 %></p>
   <p><%= @article.content %></p>
 </div>
-<p><a href="/articles/:id">Edit</a></p>
+<p><a href="/articles/<%= @article.id %>">Edit</a></p>
 <!-- I don't want this to be a submit, I want this to be where you find the form to edit everything -->
 <p><a href="/articles">Back to List of Articles</a></p>
