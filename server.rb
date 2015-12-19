@@ -104,10 +104,14 @@ module App
     erb :new_article
   end
 
-
-
   post '/new_article' do
     @article = Article.create(title: params["title"], img_url: params["img_url"], content: params["content"], created_at: DateTime.now, author_id: session[:author_id])
+    redirect to "/articles"
+  end
+
+  put "/articles/:id/edit" do
+    article = Article.find(params[:id])
+    article.update(params[:article])
     redirect to "/articles"
   end
 
