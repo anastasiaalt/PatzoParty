@@ -75,7 +75,7 @@ module App
     erb :editors
   end
 
-  post '/editors/:id' do
+  delete '/editors/:id' do
     Editor.delete(params[:id])
     redirect to "/editors"
   end
@@ -103,6 +103,8 @@ module App
   get '/new_article' do
     erb :new_article
   end
+
+
 
   post '/new_article' do
     @article = Article.create(title: params["title"], img_url: params["img_url"], content: params["content"], created_at: DateTime.now, author_id: session[:author_id])
