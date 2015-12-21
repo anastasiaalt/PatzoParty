@@ -24,7 +24,7 @@
   <% elsif @editor %>
     <form action="/articles/<%= @article.id%>/edit" method="POST">
       <input type="hidden" name="_method" value="put">
-      <textarea class="content" name="content" rows="5" cols="50" placeholder="<%= @article.content%>"></textarea>
+      <textarea class="content" name="article[content]" rows="5" cols="50" placeholder="<%= @article.content%>"></textarea>
       <input type="submit" value="Submit changes">
     </form>
   <% else %>
