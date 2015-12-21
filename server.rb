@@ -55,7 +55,7 @@ module App
     erb :authors
   end
 
-  post '/authors/:id' do
+  delete '/authors/:id' do
     Author.delete(params[:id])
     redirect to "/authors"
   end
@@ -115,7 +115,7 @@ module App
     redirect to "/articles"
   end
 
-  post '/articles/:id' do
+  delete '/articles/:id' do
     Article.delete(params[:id])
     redirect to "/articles"
   end
