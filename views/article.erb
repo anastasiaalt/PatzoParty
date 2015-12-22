@@ -19,12 +19,14 @@
     <form action="/articles/<%= @article.id%>/edit" method="POST">
       <input type="hidden" name="_method" value="put">
       <textarea class="content" name="content" rows="5" cols="50" placeholder="<%= @article.content%>"></textarea>
+    </br>
       <select name="article[category_id]">
         <% @categories.each do |category| %>
           <option value="<%= category.id %>">
           <%= category.label %>
           </option>
         <% end %>
+      </br>
         <input type="submit" value="Submit changes">
       </select>
     </form>
@@ -32,12 +34,14 @@
     <form action="/articles/<%= @article.id%>/edit" method="POST">
       <input type="hidden" name="_method" value="put">
       <textarea class="content" name="content" rows="5" cols="50" placeholder="<%= @article.content%>"></textarea>
+    </br>
       <select name="article[category_id]">
         <% @categories.each do |category| %>
           <option value="<%= category.id %>">
           <%= category.label %>
           </option>
         <% end %>
+      </br>
         <input type="submit" value="Submit changes">
       </select>
     </form>
