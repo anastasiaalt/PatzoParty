@@ -26,9 +26,9 @@
           <%= category.label %>
           </option>
         <% end %>
-      </br>
         <input type="submit" value="Submit changes">
       </select>
+    </br>
     </form>
   <% elsif @editor %>
     <form action="/articles/<%= @article.id%>/edit" method="POST">
@@ -41,9 +41,9 @@
           <%= category.label %>
           </option>
         <% end %>
-      </br>
         <input type="submit" value="Submit changes">
       </select>
+    </br>
     </form>
   <% else %>
   <% end %>
