@@ -1,5 +1,4 @@
 require "active_record"
-require "pry"
 
 ActiveRecord::Base.logger = ActiveSupport::Logger.new(STDOUT)
 

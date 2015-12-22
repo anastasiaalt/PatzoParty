@@ -1,4 +1,7 @@
-require "pry"
+if ENV['RACK_ENV'] != 'production'
+  require "pry"
+end
+
 require "sinatra"
 require "bcrypt"
 
