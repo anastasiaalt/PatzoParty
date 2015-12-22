@@ -1,5 +1,4 @@
 require_relative "config"
-require "pry"
 
 Article.delete_all
 Author.delete_all
