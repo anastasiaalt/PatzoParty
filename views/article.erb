@@ -20,15 +20,28 @@
       <input type="hidden" name="_method" value="put">
       <textarea class="content" name="content" rows="5" cols="50" placeholder="<%= @article.content%>"></textarea>
       <input type="submit" value="Submit changes">
+      <select name="category[article_id]">
+        <% @categories.each do |category| %>
+          <option value="<%= category.id %>">
+            <%= category.label %>
+          </option>
+        <% end %>
+      </select>
     </form>
   <% elsif @editor %>
     <form action="/articles/<%= @article.id%>/edit" method="POST">
       <input type="hidden" name="_method" value="put">
       <textarea class="content" name="content" rows="5" cols="50" placeholder="<%= @article.content%>"></textarea>
       <input type="submit" value="Submit changes">
+      <select name="category[article_id]">
+        <% @categories.each do |category| %>
+          <option value="<%= category.id %>">
+            <%= category.label %>
+          </option>
+        <% end %>
+      </select>
     </form>
   <% else %>
-
   <% end %>
 </div>
   <a href="/articles">Back to List of Articles</a></p>

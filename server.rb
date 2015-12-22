@@ -90,6 +90,7 @@ module App
 
   get '/articles' do
     @articles = Article.all
+    @categories = Category.all
     erb :articles
   end
 
@@ -97,6 +98,7 @@ module App
     @author = Author.find(session[:author_id]) if session[:author_id]
     @editor = Editor.find(session[:editor_id]) if session[:editor_id]
     @article = Article.find(params[:id])
+    @categories = Category.all
     erb :article
   end
 

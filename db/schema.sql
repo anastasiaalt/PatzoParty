@@ -28,13 +28,13 @@ CREATE TABLE articles (
   content VARCHAR,
   created_at DATETIME,
   updated_at DATETIME,
-  author_id INTEGER
+  author_id INTEGER,
+  category_id INTEGER
 );
 
 CREATE TABLE categories (
   id INTEGER PRIMARY KEY,
-  label VARCHAR (225),
-  article_id INTEGER
+  label VARCHAR (225)
 );
 
 CREATE TABLE articles_editors (
