@@ -103,6 +103,7 @@ module App
   end
 
   get '/new_article' do
+    @categories = Category.all
     erb :new_article
   end
 

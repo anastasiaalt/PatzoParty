@@ -1,8 +1,15 @@
 <h5>Write an article!</h5>
 <form action="/new_article" method="POST">
-  <div><input type="text" name="title" placeholder="Party Idea"></div>
-  <div><input type="text" name="img_url" placeholder="Picture"></div>
-  <div><textarea class="content" name="content" rows="5" cols="50" placeholder="Write a description of your theme idea here"></textarea></div>
-  <div><button>Submit your idea</button></div>
+  <div><input class="new-article" type="text" name="title" placeholder="Party Idea"></div>
+  <div><input class="new-article" type="text" name="img_url" placeholder="Picture"></div>
+  <div><textarea class="new-article" class="content" name="content" rows="5" cols="50" placeholder="Write a description of your theme idea here"></textarea></div>
+  <select name="article[category_id]">
+    <% @categories.each do |category| %>
+      <option value="<%= category.id %>">
+        <%= category.label %>
+      </option>
+    <% end %>
+  </select>
+  <div><button class="button">Submit your idea</button></div>
 </form>
 

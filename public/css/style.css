@@ -22,12 +22,24 @@ a {
   font-weight: bolder;
 }
 
+.new-article {
+  width: 300px;
+}
+
 #logo {
   height: 200px;
   width: 200px;
   border-radius: 12px;
   box-shadow: 2px 2px 2px 1px #000000;
   /*This is for drop shadow on logo, 4th number is opacity or brightness*/
+}
+
+#home {
+  font-size: 30px;
+}
+
+#article {
+  font-size: 30px;
 }
 
 #logodiv {
@@ -42,6 +54,11 @@ a {
 .button {
   background-color: rgba(250, 250, 250, 0.6);
   width: 300px;
+}
+
+.delete-button {
+  background-color: rgba(250, 250, 250, 0.6);
+  width: 150px;
 }
 
 .input{

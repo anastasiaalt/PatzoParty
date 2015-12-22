@@ -1,5 +1,5 @@
 <% if @author %>
-  <h1>Welcome, <%= @author.name1 %>, you party planner extraordinarie!</h1>
+  <h3>Welcome, <%= @author.name1 %>, you party planner extraordinarie!</h3>
 <% elsif @editor %>
   <h1>Welcome, <%= @editor.name1 %>, you party animal you!</h1>
 <% else %>
@@ -15,13 +15,13 @@
   <p><a href="/authors">Author List</a></p>  
   <form action="/author_sessions" method="POST">
     <input type="hidden" name="_method" value="delete">
-    <button>Log Out</button>
+    <button class="button">Log Out</button>
   </form>
 <% elsif @editor %>
   <p><a href="/editors">Editor List</a></p>
   <form action="/editor_sessions" method="POST">
     <input type="hidden" name="_method" value="delete">
-    <button>Log Out</button>
+    <button class="button">Log Out</button>
   </form>
 <% else %>
     <p><a class="nav" href="/login_author">Author Log In</a>

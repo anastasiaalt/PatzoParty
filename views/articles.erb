@@ -1,5 +1,5 @@
-<h1>Looking for a great party idea? Look no further!</h1>
 <p><a href="/new_article">Create a new article</a></p>
+<h3>Looking for a great party idea? Look no further!</h3>
 <ul>
   <% @articles.each do |article| %>
     <li>
@@ -10,7 +10,7 @@
       <p><img class="article" src="<%= article.img_url %>" alt="/public/img/partygoer.jpg"></p>
         <form method="POST" action="articles/<%= article.id %>">
         <input type="hidden" name="_method" value="DELETE">
-        <input type="submit" value="delete">
+        <input class="delete-button" type="submit" value="delete">
       </form>
     </li>
   <% end %>
