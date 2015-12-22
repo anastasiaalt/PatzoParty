@@ -114,6 +114,7 @@ module App
   put "/articles/:id/edit" do
     article = Article.find(params[:id])
     article.update(content: params["content"])
+    article.update(params["article"])
     redirect to "/articles"
   end
 
