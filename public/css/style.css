@@ -6,6 +6,12 @@ body {
   text-shadow: -1px -1px 0 #181818, 1px -1px 0 #181818, -1px 1px 0 #181818, 1px 1px 0 #181818;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
 .wrapper {
   margin: 0 auto;
   text-align: center;
@@ -14,12 +20,6 @@ body {
 .nav {
   padding-left: 20px;
   padding-right: 20px;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  font-weight: bolder;
 }
 
 .new-article {
@@ -40,15 +40,6 @@ a {
 
 #article {
   font-size: 30px;
-}
-
-#logodiv {
-  height: 250px;
-  width: 250px;
-  margin: 0 auto;
-  display: inline-block;
-  background-size: cover;
-  background-repeat: repeat;
 }
 
 .button {
