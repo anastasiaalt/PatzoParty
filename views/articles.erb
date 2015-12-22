@@ -6,7 +6,7 @@
       <p><a href="articles/<%= article.id %>"><%= article.title %> by <%= article.author.name1 %> <%= article.author.name2 %></a></p>
       <p>Written on <%= article.created_at %></p>
       <p>Edited on <%= article.updated_at %></p>
-      <p>Category: <%= article.category.label %></p>
+      <p><a href="/categories/<%= article.category.label %>">Category: <%= article.category.label %></a></p>
       <p><img class="article" src="<%= article.img_url %>" alt="/public/img/partygoer.jpg"></p>
         <form method="POST" action="articles/<%= article.id %>">
         <input type="hidden" name="_method" value="DELETE">

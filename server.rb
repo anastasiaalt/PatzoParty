@@ -123,5 +123,13 @@ module App
     redirect to "/articles"
   end
 
+  get "/categories/:id" do
+    @author = Author.find(session[:author_id]) if session[:author_id]
+    @editor = Editor.find(session[:editor_id]) if session[:editor_id]
+    @category = Category.find(params[:id])
+    @article = Article.find(params["category"])
+    erb :category
+  end  
+
   end 
 end 
