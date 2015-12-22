@@ -1,6 +1,32 @@
+body {
+  background-image: url("/img/Background\ Image.png");
+  color: white;
+  text-align: center;
+  font-family: Orbitron;
+  text-shadow: -1px -1px 0 #181818, 1px -1px 0 #181818, -1px 1px 0 #181818, 1px 1px 0 #181818;
+}
+
+.wrapper {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nav {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
 #logo {
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px 1px #000000;
+  /*This is for drop shadow on logo, 4th number is opacity or brightness*/
 }
 
 #logodiv {
@@ -12,6 +38,14 @@
   background-repeat: repeat;
 }
 
+.button {
+  background-color: rgba(250, 250, 250, 0.6);
+  width: 300px;
+}
+
+.input{
+  width: 300px;
+}
 
 .article {
   width: 500px;
@@ -21,4 +55,8 @@
 .profile {
   width: 200px;
   height: 150px;
+}
+
+.main-copy {
+  padding-top: 70px;
 }

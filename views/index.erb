@@ -3,11 +3,11 @@
 <% elsif @editor %>
   <h1>Welcome, <%= @editor.name1 %>, you party animal you!</h1>
 <% else %>
-  <h1>Have a party idea? Please login or create an account to edit or create an article.</h1>
+  <h4 class="main-copy">Have a party idea? Please login or create an account to edit or create an article.</h4>
 <% end %>
 
 <div id="logodiv">
-  <img id="logo" src="/img/patzologo.png" alt="Patzo Party">
+  <img id="logo" src="/img/logowhite.jpg" alt="Patzo Party">
 </div>
 
 <% if @author %>
@@ -24,8 +24,8 @@
     <button>Log Out</button>
   </form>
 <% else %>
-  <p><a href="/login_author">Author Log In</a>
-  <a href="/new_author">Author Sign Up!</a>
-  <a href="/login_editor">Editor Log In</a>
-  <a href="/new_editor">Editor Sign Up!</a></p>
+    <p><a class="nav" href="/login_author">Author Log In</a>
+    <a class="nav" href="/new_author">Author Sign Up!</a>
+    <a class="nav" href="/login_editor">Editor Log In</a>
+    <a class="nav" href="/new_editor">Editor Sign Up!</a></p>
 <% end %>
