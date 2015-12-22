@@ -1,6 +1,7 @@
 <div>
   <h1><%= @article.title %></h1>
   <img class="article" src="<%= @article.img_url %>" alt="No Image">
+  <p>By <%= @article.author.name1 %> <%= @article.author.name2 %></p>
   <p>Dreamed up at <%= @article.created_at %></p>
   <p>
     Last updated up at <%= @article.updated_at %> by
@@ -9,10 +10,9 @@
     <% elsif @editor %>
       <%= @editor.name1 %> <%= @editor.name2 %>
     <% else %>
-      Party Animals
+      One of the Patzo Party masterminds
     <% end %>
   </p>
-  <p>By <%= @article.author.name1 %> <%= @article.author.name2 %></p>
   <p><%= @article.content %></p>
 
   <% if @author %>
